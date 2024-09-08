@@ -102,7 +102,7 @@ function calculateScottishTaxes({
   const bracket2 = INTERMEDIATE_BRACKET - DEFAULT_PERSONAL_ALLOWANCE;
   const bracket3 = HIGHER_BRACKET - DEFAULT_PERSONAL_ALLOWANCE;
   const bracket4 = ADVANCED_BRACKET - DEFAULT_PERSONAL_ALLOWANCE;
-  const bracket5 = TOP_BRACKET - DEFAULT_PERSONAL_ALLOWANCE;
+  // const bracket5 = TOP_BRACKET - DEFAULT_PERSONAL_ALLOWANCE;
 
   // 6 rates of tax in Scotland
   let starterRateTax = 0;
