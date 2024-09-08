@@ -1,51 +1,48 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 // README at: https://github.com/devcontainers/templates/tree/main/src/typescript-node
 {
-	"name": "Node.js & TypeScript",
-	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-	"image": "mcr.microsoft.com/devcontainers/typescript-node:1-22-bookworm",
-	"customizations": {
-		"vscode": {
-			"extensions": [
-				"dbaeumer.vscode-eslint",
-				"esbenp.prettier-vscode",
-				"ms-vscode-remote.remote-containers",
-				"YoavBls.pretty-ts-errors",
-				"ms-azuretools.vscode-docker",
-				"vscode-icons-team.vscode-icons"
-			]
-		}
-	},
+  "name": "Node.js & TypeScript",
+  // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+  "image": "mcr.microsoft.com/devcontainers/typescript-node:1-22-bookworm",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "ms-vscode-remote.remote-containers",
+        "YoavBls.pretty-ts-errors",
+        "ms-azuretools.vscode-docker",
+        "vscode-icons-team.vscode-icons"
+      ]
+    }
+  },
 
-	// Features to add to the dev container. More info: https://containers.dev/features.
-	"features": {
-		"ghcr.io/devcontainers/features/common-utils:2": 
-		{
-			"configureZshAsDefaultShell": true
-		},
-		"ghcr.io/devcontainers/features/git:1": {},
-		"ghcr.io/devcontainers/features/git-lfs:1": {},
-		"ghcr.io/devcontainers/features/node:1": {}
-	},
-
-	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	"forwardPorts": [
-		3000
-	],
-	"portsAttributes": {
-        "3000": {
-            "label": "Money App",
-            "onAutoForward": "openPreview"
-        }
+  // Features to add to the dev container. More info: https://containers.dev/features.
+  "features": {
+    "ghcr.io/devcontainers/features/common-utils:2": {
+      "configureZshAsDefaultShell": true
     },
+    "ghcr.io/devcontainers/features/git:1": {},
+    "ghcr.io/devcontainers/features/git-lfs:1": {},
+    "ghcr.io/devcontainers/features/node:1": {}
+  },
 
-	"waitFor": "updateContentCommand",
-	// Use 'postCreateCommand' to run commands after the container is created.
-	 "postCreateCommand": "pnpm install"
+  // Use 'forwardPorts' to make a list of ports inside the container available locally.
+  "forwardPorts": [3000],
+  "portsAttributes": {
+    "3000": {
+      "label": "Money App",
+      "onAutoForward": "openPreview"
+    }
+  },
 
-	// Configure tool-specific properties.
-	// "customizations": {},
+  "waitFor": "updateContentCommand",
+  // Use 'postCreateCommand' to run commands after the container is created.
+  "postCreateCommand": "pnpm install"
 
-	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
-	// "remoteUser": "root"
+  // Configure tool-specific properties.
+  // "customizations": {},
+
+  // Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+  // "remoteUser": "root"
 }
